@@ -29,7 +29,7 @@ public class UserListView extends StandardListView<User> {
     @Supply(to = "usersDataGrid.picture", subject = "renderer")
     private Renderer<User> usersDataGridPictureRenderer() {
         return new ComponentRenderer<>(user -> {
-            FileRef fileRef = user.getPicture();
+            FileRef fileRef = user.getPictureFile();
             if (fileRef != null) {
                 Image image = uiComponents.create(Image.class);
                 image.setWidth("30px");

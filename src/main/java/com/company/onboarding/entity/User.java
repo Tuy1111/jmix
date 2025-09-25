@@ -9,6 +9,7 @@ import io.jmix.core.metamodel.annotation.Composition;
 import io.jmix.core.metamodel.annotation.DependsOnProperties;
 import io.jmix.core.metamodel.annotation.InstanceName;
 import io.jmix.core.metamodel.annotation.JmixEntity;
+import io.jmix.oidc.user.JmixOidcUserEntity;
 import io.jmix.security.authentication.JmixUserDetails;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -26,7 +27,7 @@ import java.util.UUID;
         @Index(name = "IDX_USER__ON_USERNAME", columnList = "USERNAME", unique = true),
         @Index(name = "IDX_USER__DEPARTMENT", columnList = "DEPARTMENT_ID")
 })
-public class User implements JmixUserDetails, HasTimeZone {
+public class User extends JmixOidcUserEntity implements JmixUserDetails, HasTimeZone {
 
     @Id
     @Column(name = "ID", nullable = false)
@@ -76,18 +77,18 @@ public class User implements JmixUserDetails, HasTimeZone {
     @Column(name = "JOINING_DATE")
     private LocalDate joiningDate;
 
-    @Column(name = "PICTURE", length = 1024)
-    private FileRef picture;
+    @Column(name = "PICTURE_FILE", length = 1024)
+    private FileRef pictureFile;
 
     @Transient
     protected Collection<? extends GrantedAuthority> authorities;
 
-    public FileRef getPicture() {
-        return picture;
+    public FileRef getPictureFile() {
+        return pictureFile;
     }
 
-    public void setPicture(FileRef picture) {
-        this.picture = picture;
+    public void setPictureFile(FileRef pictureFile) {
+        this.pictureFile = pictureFile;
     }
 
     public LocalDate getJoiningDate() {

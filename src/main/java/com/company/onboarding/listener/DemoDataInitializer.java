@@ -122,7 +122,7 @@ public class DemoDataInitializer {
         user.setLastName("Brown");
         user.setDepartment(departments.get(0));
         user.setJoiningDate(LocalDate.now().minusYears(2).minusWeeks(3));
-        user.setPicture(uploadPicture("com/company/onboarding/demo/" , "alice.png"));
+        user.setPictureFile(uploadPicture("com/company/onboarding/demo/" , "alice.png"));
         saveContext.saving(user);
         list.add(user);
         for (Step step : steps) {
@@ -148,7 +148,7 @@ public class DemoDataInitializer {
         user.setLastName("Wilson");
         user.setDepartment(departments.get(0));
         user.setJoiningDate(LocalDate.now().minusYears(1).minusWeeks(5));
-        user.setPicture(uploadPicture("com/company/onboarding/demo/" , "james.png"));
+        user.setPictureFile(uploadPicture("com/company/onboarding/demo/" , "james.png"));
         saveContext.saving(user);
         list.add(user);
         for (Step step : steps) {
@@ -174,7 +174,7 @@ public class DemoDataInitializer {
         user.setLastName("Jones");
         user.setDepartment(departments.get(1));
         user.setJoiningDate(LocalDate.now().minusDays(3));
-        user.setPicture(uploadPicture("com/company/onboarding/demo/", "mary.png"));
+        user.setPictureFile(uploadPicture("com/company/onboarding/demo/", "mary.png"));
         saveContext.saving(user);
         list.add(user);
         for (Step step : steps) {
@@ -196,7 +196,7 @@ public class DemoDataInitializer {
         user.setLastName("Evans");
         user.setDepartment(departments.get(2));
         user.setJoiningDate(LocalDate.now().minusDays(2));
-        user.setPicture(uploadPicture("com/company/onboarding/demo/", "linda.png"));
+        user.setPictureFile(uploadPicture("com/company/onboarding/demo/", "linda.png"));
         saveContext.saving(user);
         list.add(user);
         for (Step step : steps) {
@@ -218,7 +218,7 @@ public class DemoDataInitializer {
         user.setLastName("Baker");
         user.setDepartment(departments.get(2));
         user.setJoiningDate(LocalDate.now());
-        user.setPicture(uploadPicture("com/company/onboarding/demo/", "susan.png"));
+        user.setPictureFile(uploadPicture("com/company/onboarding/demo/", "susan.png"));
         saveContext.saving(user);
         list.add(user);
         for (Step step : steps) {
@@ -240,7 +240,7 @@ public class DemoDataInitializer {
         user.setLastName("Taylor");
         user.setDepartment(departments.get(2));
         user.setJoiningDate(LocalDate.now().minusDays(1));
-        user.setPicture(uploadPicture("com/company/onboarding/demo/", "bob.png"));
+        user.setPictureFile(uploadPicture("com/company/onboarding/demo/", "bob.png"));
         saveContext.saving(user);
         list.add(user);
         for (Step step : steps) {

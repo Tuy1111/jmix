@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view"
+      title="Superset Dashboard">
+
+    <layout>
+        <!-- Nhúng iframe Superset -->
+        <iframe id="supersetFrame"
+                classNames="superset-frame"
+                width="100%"
+                height="800px"
+                style="border:none;"/>
+
+
+
+    </layout>
+</view>

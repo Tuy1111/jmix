@@ -26,6 +26,15 @@ repositories {
 }
 
 dependencies {
+    implementation 'io.jmix.superset:jmix-superset-starter'
+    implementation 'io.jmix.superset:jmix-superset-flowui-starter'
+
+    implementation 'io.jmix.oidc:jmix-oidc-starter'
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+    implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+    
     implementation 'io.jmix.core:jmix-core-starter'
     implementation 'io.jmix.data:jmix-eclipselink-starter'
     implementation 'io.jmix.security:jmix-security-starter'
@@ -40,12 +49,12 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    runtimeOnly 'org.hsqldb:hsqldb'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     testImplementation 'io.jmix.flowui:jmix-flowui-test-assist'
+    implementation 'org.postgresql:postgresql'
 }
 
 configurations.implementation {

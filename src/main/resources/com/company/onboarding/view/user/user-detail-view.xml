@@ -51,12 +51,13 @@
             <datePicker id="joiningDateField" property="joiningDate"/>
             <details summaryText="Picture">
                 <hbox>
-                    <fileStorageUploadField id="pictureField" property="picture" dataContainer="userDc"
+                    <fileStorageUploadField id="pictureField" property="pictureFile" dataContainer="userDc"
                     />
-                    <image id="image" property="picture" dataContainer="userDc" height="10em" width="10em"
+                    <image id="image" property="pictureFile" dataContainer="userDc" height="10em" width="10em"
                            classNames="user-picture"/>
                 </hbox>
             </details>
+            <fileStorageUploadField id="pictureFileField" property="pictureFile"/>
         </formLayout>
         <hbox id="buttonsPanel" classNames="buttons-panel">
             <button id="generateButton" text="Generate"/>

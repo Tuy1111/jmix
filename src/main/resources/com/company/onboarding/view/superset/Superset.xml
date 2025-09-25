@@ -1,0 +1,8 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:superset="http://jmix.io/schema/superset/ui"
+      title="Superset">
+    <layout>
+            <superset:dashboard id="dashboard" width="100%" height="100%"
+                        embeddedId="2ad9c913-18fd-49b0-af3d-506f0dd01bac"/>
+    </layout>
+</view>

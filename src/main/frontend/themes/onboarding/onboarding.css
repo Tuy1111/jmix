@@ -7,3 +7,16 @@
 vaadin-grid.onboarding-steps::part(overdue-step) {
     color: red;
 }
+
+.superset-frame {
+    position: relative;
+    z-index: 2;
+}
+
+/* If using an embed container from @superset-ui, keep it below the iframe */
+.superset-embed-container,
+[data-superset-embed],
+.superset-embedded {
+    position: relative;
+    z-index: 1;
+}
